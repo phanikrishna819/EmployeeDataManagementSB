@@ -76,29 +76,28 @@ public class TaxService {
     public List<Tax> getSingleTax(int EmployeeID) {
         ID= String.valueOf(EmployeeID);
         Optional<Employee> employee = employeeRepository.findById(ID);
-        AnnualSalary = employee.get().getMonthlySalary();
-        AnnualSalary = AnnualSalary*12;
-        if(AnnualSalary<=200000)
+        setAnnualSalary(employee.get().getMonthlySalary()*12);
+        if(getAnnualSalary()<=200000)
         {
             return new ArrayList<>(Arrays.asList(new Tax(getAnnualSalary(), getID(), 0)));
         }
-        else if(AnnualSalary<=300000)
+        else if(getAnnualSalary()<=300000)
         {
-            tax = (AnnualSalary-200000)*0.1;
+            tax = (getAnnualSalary()-200000)*0.1;
             return new ArrayList<>(Arrays.asList(new Tax(getAnnualSalary(), getID(),getTax())));
         }
-        else if(AnnualSalary<=500000) {
-            tax = (AnnualSalary - 300000)*0.2 + (100000*0.1);
+        else if(getAnnualSalary()<=500000) {
+            tax = (getAnnualSalary() - 300000)*0.2 + (100000*0.1);
             return new ArrayList<>(Arrays.asList(new Tax(getAnnualSalary(), getID(), getTax())));
         }
-        else if(AnnualSalary<=1000000)
+        else if(getAnnualSalary()<=1000000)
         {
-            tax = ((AnnualSalary-500000)*0.3)+(200000*0.2)+(100000*0.1);
+            tax = ((getAnnualSalary()-500000)*0.3)+(200000*0.2)+(100000*0.1);
             return new ArrayList<>(Arrays.asList(new Tax(getAnnualSalary(), getID(), getTax())));
         }
         else
         {
-            tax = ((AnnualSalary-1000000)*0.4)+(500000*0.3)+(200000*0.2)+(100000*0.1);
+            tax = ((getAnnualSalary()-1000000)*0.4)+(500000*0.3)+(200000*0.2)+(100000*0.1);
             return new ArrayList<>(Arrays.asList(new Tax(getAnnualSalary(), getID(), getTax())));
         }
     }
