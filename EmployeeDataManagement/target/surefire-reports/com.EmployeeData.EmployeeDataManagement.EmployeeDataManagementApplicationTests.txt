@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.EmployeeData.EmployeeDataManagement.EmployeeDataManagementApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.188 s <<< FAILURE! - in com.EmployeeData.EmployeeDataManagement.EmployeeDataManagementApplicationTests
+com.EmployeeData.EmployeeDataManagement.EmployeeDataManagementApplicationTests  Time elapsed: 0.187 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Class.getName()" because "found" is null
+
