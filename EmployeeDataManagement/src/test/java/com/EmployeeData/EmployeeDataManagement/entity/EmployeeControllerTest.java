@@ -65,7 +65,7 @@ class EmployeeControllerTest {
         emp.setEmployeeID(1);
         emp.setMonthlySalary(70000);
         emp.setEmail("phanikrishna@gmial.com");
-        emp.setContact("9515757750");
+        emp.setContact("9577885550");
         emp.setLastName("Krishna");
         emp.setFirstName("Phani");
         emp.setDateOfJoining("24Nov");
@@ -84,7 +84,7 @@ class EmployeeControllerTest {
         emp.setEmployeeID(1);
         emp.setMonthlySalary(90000);
         emp.setEmail("phanikrishna@gmial.com");
-        emp.setContact("9515757750");
+        emp.setContact("957785550");
         emp.setLastName("Krishna");
         emp.setFirstName("Phani");
         emp.setDateOfJoining("24Nov");
@@ -104,7 +104,7 @@ class EmployeeControllerTest {
         emp.setEmployeeID(1);
         emp.setMonthlySalary(90000);
         emp.setEmail("phanikrishna@gmial.com");
-        emp.setContact("9515757750");
+        emp.setContact("9517855445");
         emp.setLastName("Krishna");
         emp.setFirstName("Phani");
         emp.setDateOfJoining("24Nov");
