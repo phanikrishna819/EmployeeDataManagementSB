@@ -35,7 +35,7 @@ class EmployeeServiceTest {
     @Test
     public void findAll() throws Exception{
         Mockito.when(employeeService.findAll()).thenReturn(Arrays.asList(
-                new Employee("Phani","Krishna","95157577555","phanikrishna819@gmial.com","",1,77000),
+                new Employee("Phani","Krishna","95157577555","phanikrish9@gmial.com","",1,77000),
                 new Employee("Phani","Krishna","9515757000","phani@gmial.com","",2,88900)
                 ));
 
