@@ -70,14 +70,18 @@ class EmployeeServiceTest {
     @Test
     public void delete() throws Exception{
         Employee e = new Employee();
-//        e.setEmployeeID(1);
-//        int id= e.getEmployeeID();
-//        Mockito.when(employeeRepository.findById(1)).thenReturn(Optional.ofNullable(e));
-//        willDoNothing().given(employeeRepository).deleteById(id);
+        e.setFirstName("Phani");
+        e.setLastName("Krishna");
+        e.setEmail("phanikrishna9@gmail.com");
+        e.setContact("9517788999");
+        e.setDateOfJoining("24Nov");
+        e.setEmployeeID(1);
+        e.setMonthlySalary(40000);
+        int id= e.getEmployeeID();
+        Mockito.when(employeeRepository.findById(1)).thenReturn(Optional.ofNullable(e));
+        willDoNothing().given(employeeRepository).deleteById(id);
         employeeService.delete(e);
-        System.out.println("DELETED");
         verify(employeeRepository).delete(e);
-        assertFalse(this.employeeRepository.existsById(1));
     }
 
 }
